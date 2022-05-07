@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 取随机验证码
+        var arr=['a','b','c','d','e','f','g','f','m','n'];
+        var newArr=[];
+        for(var i=0;i<4;i++){
+            var num=Math.floor(Math.random()*arr.length);
+            var val=arr[num];
+            newArr.push(val)
+        }
+        console.log(newArr)
+
+
+        // hOw aRE yOU 首字母大写其余小写;
+
+        // 方法一
+        var str='hOw aRE yOU ';
+        var str1=str.substr(0,3);
+        var str2=str.slice(4,7);
+        var str3=str.substring(8,11);
+        // console.log(str1,str2,str3)
+        var str1_s=str1.substr(0,1).toUpperCase();
+        var str1_q=str1.substr(1).toLowerCase()
+        var str2_s=str2.substr(0,1).toUpperCase();
+        var str2_q=str2.substr(1).toLowerCase()
+        var str3_s=str3.substr(0,1).toUpperCase();
+        var str3_q=str3.substr(1).toLowerCase()
+        var str=str1_s+str1_q+" "+str2_s+str2_q+" "+str3_s+str3_q;
+        console.log(str)
+
+        // 方法二
+        var str='hOw aRE yOU ';
+        var str_arr=str.split(' ');
+        for(var i=0;i<str_arr.length;i++){
+            var str1=str_arr[i].substr(0,1).toUpperCase();
+            var str2=str_arr[i].substr(1).toLowerCase();
+            str_arr[i]=str1+str2
+            
+
+        }
+        var str=str_arr.join(' ')
+        console.log(str)
+    
+        // 取最大值/最小值
+        var arr=[23,45,66,788,23];
+        console.log(Math.max(...arr))
+        console.log(Math.min(...arr))
+
+        // 2的3次方
+        console.log(Math.pow(2,3))
+        // π
+        console.log(Math.PI)
+
+       
+    </script>
+</body>
+</html>
